@@ -1,0 +1,115 @@
+@import "../base/variables.scss";
+
+.block {
+  margin: 0 auto;
+  padding: 0 15px;
+  min-width: 320px;
+
+  background-color: red;
+  text-align: center;
+  line-height: 180px;
+  font-size: 32px;
+  white-space: nowrap;
+
+  @media screen and (min-width: 600px) {
+    background-color: green;
+  }
+
+  @media screen and (min-width: 900px) {
+    background-color: yellow;
+  }
+
+  @media screen and (min-width: 1140px) {
+    background-color: blue;
+  }
+
+  &.responsive {
+    max-width: 1400px;
+    margin-bottom: 50px;
+  }
+
+  &.adaptive {
+    max-width: 400px;
+
+    @media screen and (min-width: 600px) {
+      max-width: 600px;
+    }
+
+    @media screen and (min-width: 900px) {
+      max-width: 900px;
+    }
+
+    @media screen and (min-width: 1140px) {
+      max-width: 1140px;
+    }
+  }
+}
+
+.home {
+  // .home__elements
+
+  &__elements {
+  }
+}
+.elements {
+  // .elements-home
+
+  &-home {
+  }
+}
+.elements-home {
+  // .elements-home__container
+
+  &__container {
+  }
+
+  // .elements-home__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media screen and (min-width: $tablet){
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    @media screen and (min-width: $laptop){
+        gap: 15px;
+    }
+  }
+
+  // .elements-home__item
+
+  &__item {
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+
+    @media screen and (min-width: $tablet){
+        flex: 1 1 calc((100% - 10px) / 2);
+        font-size: 32px;
+        color: red;
+    }
+
+    @media screen and (min-width: $laptop){
+        flex: 1 1 calc((100% - 30px) / 3);
+        font-size: 40px;
+        padding: 40px;
+    }
+  }
+}
+
+$colors: "#F44336", "#3F51B5", "#4CAF50", "#00BCD4", "#E91E63", "#009688";
+
+@each $color in $colors {
+  $idx: index($colors, $color);
+
+  .elements-home__item:nth-child(#{$idx}) {
+    background-color: #{$color};
+  }
+}

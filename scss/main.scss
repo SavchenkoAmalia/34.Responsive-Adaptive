@@ -1,0 +1,55 @@
+//! import base
+@import "./base/reset.scss";
+@import "./base/variables.scss";
+
+body{
+    background-color: plum;
+
+    //! логічний оператор АБО
+
+    @media screen and ( max-width:425px ), ( max-width:320px ) {
+        background-color: orange;
+    }
+
+
+    //! логічний оператор and
+
+    @media screen and ( min-width:425px ) and ( max-width:425px ) {
+        background-color: deeppink;
+    }
+    
+    @media screen and ( min-width:768px ) {
+        background-color: black;
+    }
+
+
+    @media screen and ( min-width:1140px ) {
+        background-color: lightskyblue;
+    }
+
+    @media not print, ( min-width:1920px ){
+        font-size: 50px;
+    }
+
+    // //!  схожий варіант з all
+    // @media screen and ( min-width:768px ) {
+    //     background-color: black;
+    // }
+
+    // @media screen and ( min-width:768px ) {
+    //     background-color: black;
+    // }
+
+
+}
+
+.container{
+    min-width: 320px;
+    max-width: 1700px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+//! import pages
+@import "./pages/home.scss";
+

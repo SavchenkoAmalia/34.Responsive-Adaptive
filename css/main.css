@@ -1,0 +1,316 @@
+/* Reset and base styles */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+input:focus, input:active,
+textarea:focus,
+textarea:active,
+button:focus,
+button:active,
+select:focus,
+select:active {
+  outline: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  background-color: plum;
+}
+@media screen and (max-width: 425px), (max-width: 320px) {
+  body {
+    background-color: orange;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 425px) {
+  body {
+    background-color: deeppink;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-color: black;
+  }
+}
+@media screen and (min-width: 1140px) {
+  body {
+    background-color: lightskyblue;
+  }
+}
+@media not print, (min-width: 1920px) {
+  body {
+    font-size: 50px;
+  }
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1700px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.block {
+  margin: 0 auto;
+  padding: 0 15px;
+  min-width: 320px;
+  background-color: red;
+  text-align: center;
+  line-height: 180px;
+  font-size: 32px;
+  white-space: nowrap;
+}
+@media screen and (min-width: 600px) {
+  .block {
+    background-color: green;
+  }
+}
+@media screen and (min-width: 900px) {
+  .block {
+    background-color: yellow;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .block {
+    background-color: blue;
+  }
+}
+.block.responsive {
+  max-width: 1400px;
+  margin-bottom: 50px;
+}
+.block.adaptive {
+  max-width: 400px;
+}
+@media screen and (min-width: 600px) {
+  .block.adaptive {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .block.adaptive {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .block.adaptive {
+    max-width: 1140px;
+  }
+}
+
+.elements-home__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media screen and (min-width: 768px) {
+  .elements-home__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .elements-home__list {
+    gap: 15px;
+  }
+}
+.elements-home__item {
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  .elements-home__item {
+    flex: 1 1 calc((100% - 10px) / 2);
+    font-size: 32px;
+    color: red;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .elements-home__item {
+    flex: 1 1 calc((100% - 30px) / 3);
+    font-size: 40px;
+  }
+}
+
+.elements-home__item:nth-child(1) {
+  background-color: #F44336;
+}
+
+.elements-home__item:nth-child(2) {
+  background-color: #3F51B5;
+}
+
+.elements-home__item:nth-child(3) {
+  background-color: #4CAF50;
+}
+
+.elements-home__item:nth-child(4) {
+  background-color: #00BCD4;
+}
+
+.elements-home__item:nth-child(5) {
+  background-color: #E91E63;
+}
+
+.elements-home__item:nth-child(6) {
+  background-color: #009688;
+}
